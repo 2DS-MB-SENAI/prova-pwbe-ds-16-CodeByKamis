@@ -3,10 +3,10 @@ from . import views
 
 urlpatterns = [
     path('api/servicos/', views.criar_ver, name='criar_ver'),
-    path('api/servicos/<int:pk>', views.detalhes_servico, name='detalhes_servico'),
+    path('api/servicos/<int:pk>/', views.detalhes_servico, name='detalhes_servico'),
 
-    path('api/servicos/', views.creat_read, name='creat_read'),
-    path('api/servicos/<int:pk>', views.detalhes_agentamento, name='detalhes_agentamento'),
+    path('api/agendamento/', views.creat_read, name='creat_read'),
+    path('api/agendamento/<int:pk>/', views.detalhes_agentamento, name='detalhes_agentamento'),
 
 
 
