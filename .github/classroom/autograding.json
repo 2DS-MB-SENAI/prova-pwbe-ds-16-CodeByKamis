@@ -48,7 +48,7 @@
 
     {
       "name": "7. Teste POST /consultas/nova/ - Dados Válidos (200)",
-      "run": "python manage.py shell -c \"from django.test import Client; from clinica.models import Medico; Medico.objects.create(nome='Dr. Teste', especialidade='CAR', crm='12/34567'); r = Client().post('/consultas/nova/', {'medico':1, 'paciente':'Paciente', 'data':'2025-01-01 10:00', 'status':'agendado'}); print('PASS' if r.status_code == 200 else 'FAIL')\"",
+      "run": "python manage.py shell -c \"from django.test import Client; from clinica.models import Medico; Medico.objects.create(nome='Dr. Teste', especialidade='CAR', crm='12/34567'); r = Client().post('/consultas/nova/', {'medico':1, 'paciente':'Paciente', 'data':'2025-01-01 10:00', 'status':'AGENDADO'}); print('PASS' if r.status_code == 200 else 'FAIL')\"",
       "output": "PASS",
       "timeout": 15,
       "points": 6
