@@ -75,7 +75,7 @@ def creat_read(request):
         serializer = SegundoSerializer(data=request.data, many=isinstance(request.data, list))
         if serializer.is_valid():
             serializer.save()
-            return Response (serializer.data, status=status.HTTP_200_OK)
+            return Response (serializer.data, status=status.HTTP_201_CREATED)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 # pesquisar agendamento por id
