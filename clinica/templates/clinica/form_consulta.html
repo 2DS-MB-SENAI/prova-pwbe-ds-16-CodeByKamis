@@ -1,0 +1,23 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consulta</title>
+</head>
+<body>
+    
+    <h1>SEJA BEM-VINDO A LISTA DE CONSULTAS</h1>
+     
+    <div class="oculto">
+        {% csrf_token %}
+        {% url 'form_consulta' %}
+    </div>
+    <ul>
+        <h1>ERRO</h1>
+    </ul>
+
+
+</body>
+</html>

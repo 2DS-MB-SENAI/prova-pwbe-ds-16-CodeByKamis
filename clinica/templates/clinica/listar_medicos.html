@@ -1,0 +1,29 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medicos</title>
+</head>
+<body>
+    
+    <h1>SEJA BEM-VINDO A LISTA DE MÉDICOS</h1>
+     
+    <div class="oculto">
+        {% csrf_token %}
+        {% url 'listar_medicos' %}
+    </div>
+    <ul>
+        {% for medico in medicos %}
+        <li>
+            <h2>{{ medico.nome }}</h2>
+            <p>{{ medico.especialidade }}</p>
+            <p>{{ medico.email }}</p>        
+        </li>
+        {% endfor %}
+    </ul>
+
+
+</body>
+</html>
