@@ -84,7 +84,7 @@ def detalhes_agentamento(request,pk):
     try:
         agendamentos = Agendamento.objects.get(pk=pk)
     except Agendamento.DoesNotExist:
-        return Response({'erro': 'Esse serviço é inexistente'}, status=status.HTTP_404_NOT_FOUND)
+        return Response({'erro': 'Esse agendamento é inexistente'}, status=status.HTTP_404_NOT_FOUND)
     serializer = SegundoSerializer(agendamentos)
     return Response(serializer.data)
 
