@@ -11,11 +11,11 @@ class Medico(models.Model):
         ('pediatra', 'PEDIATRA'),
         ('dentista', 'DENTISTA'),
         ('cirurgião', 'CIRURGIÃO'),
-        ('car', 'CAR'),
+        ('CAR', 'CAR'),
     ]
     especialidade = models.CharField(max_length=12, choices=escolhas_especialidade)
     crm = models.CharField(max_length=8)
-    email = models.EmailField()
+    email = models.EmailField(blank=True, null=True)
     def __str__(self):
         return self.nome
 
